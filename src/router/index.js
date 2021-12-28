@@ -4,11 +4,13 @@ import store from "@/store"
 import { getInheritanceMetaAttribute, matchUserPermissions } from "@/router/tools/permissions"
 
 import Auth from "./modules/auth"
+import Home from "./modules/home"
 
 Vue.use(Router)
 
 const routes = [
   ...Auth,
+  ...Home,
 ]
 
 const router = new Router({

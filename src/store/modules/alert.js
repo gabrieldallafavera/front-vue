@@ -5,7 +5,6 @@ export default {
         type: null,
     },
     getters: {
-
         /**
          * @param {Object} state
          * @returns {Object}
@@ -21,7 +20,6 @@ export default {
         },
     },
     actions: {
-
         /**
          * @param {String} commit
          * @param {object} payload

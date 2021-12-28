@@ -1,20 +1,20 @@
 module.exports = {
     "root": true,
-    "env": {
-        "node": true,
-    },
-    "extends": [
-        "plugin:vue/base",
-        "eslint:recommended",
-    ],
-    "parserOptions": {
-        "parser": "babel-eslint",
-    },
-    "plugins": [
-        "vue",
-    ],
-    "rules": {
-        "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+	"env": {
+		"node": true,
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:vue/essential",
+	],
+	"parserOptions": {
+		"parser": "babel-eslint",
+	},
+	"plugins": [
+		"vue",
+	],
+	"rules": {
+		"no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
 		"no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
 		"linebreak-style": [
 			"error",
@@ -153,5 +153,5 @@ module.exports = {
             "default": "shorthand",
             "named": "shorthand",
         }],
-    },
+	},
 }

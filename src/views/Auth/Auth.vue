@@ -1,8 +1,5 @@
 <template>
-    <div>
-        <AppAlert />
-        <Login />
-    </div>
+    <Login />
 </template>
 
 <script>
@@ -12,7 +9,6 @@ export default {
     name: "Auth",
     components: {
         Login,
-        AppAlert: () => import("@/components/AppAlert"),
     },
 }
 </script>
