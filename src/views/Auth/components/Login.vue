@@ -13,10 +13,10 @@
                     md="6"
                     lg="4">
                     <v-card class="elevation-8">
-                        <v-card-title class="elevation-4 pa-0 overflow-hidden">
-                            <v-img :src="require('@/assets/')"/>
+                        <v-card-title class="elevation-4">
+                            <!-- <v-img :src="require('@/assets/')"/> -->
                         </v-card-title>
-                        <v-card-text>
+                        <v-card-text class="py-4">
                             <h4>LOGAR</h4>
                             <v-form>
                                 <v-text-field
@@ -62,7 +62,6 @@
                                 <v-icon left> mdi-logout-variant </v-icon>
                                 Logar
                             </v-btn>
-                            <v-divider/>
                             <v-btn
                                 :loading="false"
                                 plain

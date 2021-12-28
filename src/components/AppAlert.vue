@@ -23,15 +23,16 @@
 import { mapState, mapMutations } from "vuex"
 
 export default {
-  computed: {
-    ...mapState({ alert: "Alert" }),
-  },
-  methods: {
-    ...mapMutations({ setAlert: "Alert" }),
-    closeAlert() {
-        this.setAlert({})
+    name: "AppAlert",
+    computed: {
+        ...mapState({ alert: "Alert" }),
     },
-  },
+    methods: {
+        ...mapMutations({ setAlert: "Alert" }),
+        closeAlert() {
+            this.setAlert({})
+        },
+    },
 }
 </script>
 

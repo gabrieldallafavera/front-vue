@@ -20,8 +20,8 @@ Vue.use(ApiPlugin)
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  vuetify,
   router,
   store,
-  vuetify,
+  render: h => h(App),
 }).$mount("#app")

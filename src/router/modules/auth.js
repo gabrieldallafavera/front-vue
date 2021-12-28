@@ -8,16 +8,24 @@ export default [
         },
     },
     {
-        path: "/register/:token",
+        path: "/register",
         name: "register",
         component: () => import("@/views/Auth/components/Register"),
         meta: {
-            isProtected: true,
-            permissions: [
-                "",
-            ],
+            onlyGuest: true,
         },
     },
+    // {
+    //     path: "/register/:token",
+    //     name: "register",
+    //     component: () => import("@/views/Auth/components/Register"),
+    //     meta: {
+    //         isProtected: true,
+    //         permissions: [
+    //             "",
+    //         ],
+    //     },
+    // },
     {
         path: "/forgot",
         name: "forgot",

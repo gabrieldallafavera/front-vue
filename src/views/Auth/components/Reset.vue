@@ -13,10 +13,10 @@
                     md="6"
                     lg="4">
                     <v-card class="elevation-8">
-                        <v-card-title class="elevation-4 pa-0 overflow-hidden">
-                            <v-img :src="require('@/assets/')"/>
+                        <v-card-title class="elevation-4">
+                            <!-- <v-img :src="require('@/assets/')"/> -->
                         </v-card-title>
-                        <v-card-text>
+                        <v-card-text class="py-4">
                             <h4>REDEFINIR SENHA</h4>
                             <v-form>
                                 <v-text-field
@@ -129,7 +129,7 @@ export default {
                 if (this.form.password == this.form.password_confirmation) {
                     await reset(this.token, this.form)
                     this.showMessage("Senha redefinida com sucesso!", "success")
-                    this.$router.push({ name: "Login" })
+                    this.$router.push({ name: "login" })
                 } else {
                     this.errors.password = "As senhas não batem"
                 }

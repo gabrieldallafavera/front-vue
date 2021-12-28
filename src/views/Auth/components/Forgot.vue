@@ -13,10 +13,10 @@
                     md="6"
                     lg="4">
                     <v-card class="elevation-8">
-                        <v-card-title class="elevation-4 pa-0 overflow-hidden">
-                            <v-img :src="require('@/assets/')"/>
+                        <v-card-title class="elevation-4">
+                            <!-- <v-img :src="require('@/assets/')"/> -->
                         </v-card-title>
-                        <v-card-text>
+                        <v-card-text class="py-4">
                             <h4>RECUPERAR SENHA</h4>
                             <v-form>
                                 <v-text-field
@@ -80,7 +80,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions({ showAlert: "Alert/showAlert" }),
+        ...mapActions({ showAlert: "Alert/showAlert", showLoading: "Loading/showLoading" }),
         showMessage(message, type) {
             this.showAlert({
                 message,
@@ -92,14 +92,12 @@ export default {
                 this.isLoading = true
                 await forgot(this.form.email)
                 this.showMessage("E-mail enviado com sucesso!", "success")
-                this.$router.push({ name: "Login" })
+                this.$router.push({ name: "login" })
             } catch ({ response }) {
                 if (response.data.errors) {
                     this.showMessage("Erro ao enviar o e-mail!", "error")
                 } else {
-                    this.errors.name = response.data.message
                     this.errors.email = response.data.message
-                    this.errors.password = response.data.message
                 }
             } finally {
                 this.isLoading = false
